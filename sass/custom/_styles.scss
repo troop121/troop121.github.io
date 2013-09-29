@@ -3,7 +3,13 @@
 
 // header background image -- https://github.com/imathis/octopress/issues/356
 header[role="banner"] {
+  @media only screen and (min-width: 480px) {
      background-image: url(/images/ssg-logo.png);
      background-repeat: no-repeat;
      background-position: right;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body > header { font-size: $header-font-size * 0.8; }
 }
