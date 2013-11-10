@@ -1,5 +1,3 @@
-document.title = options.date + " - " + document.title;
-
 function makeNiceEntry(entry, $scope) {
     var rawmasses = entry.gsx$afterwhichmassescanyouhelp.$t;
     if(rawmasses[0] == "'") {

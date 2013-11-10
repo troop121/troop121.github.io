@@ -10,10 +10,10 @@ description: Signup information for Donut Sunday
 	var options = {
 		ssSheet: "{{ page.spreadsheetid }}",
 		ssKey: "{{ page.spreadsheetkey }}",
-		//formKey: "{{ page.formkey }}",
-		date: "{{ page.date }}",
 		massTimes: ["{{ page.masstimes | join: '", "' }}"]
 	};
+	
+	document.title = "{{ page.date | date: "%B %-d, %Y" }} - " + document.title;
 </script>
 <script src="/javascripts/donuts.js"></script>
 
