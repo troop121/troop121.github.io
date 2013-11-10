@@ -30,7 +30,13 @@ description: Signup information for Donut Sunday
 </style>
 
 <div style="text-align: center;">
-	<h3><a href="https://docs.google.com/forms/d/{{ page.formkey }}/viewform">Sign up</a> to help out on Donut Sunday, {{ page.date }}</h3>
+	<script>
+		if(new Date() > new Date({{ page.date | date: "%Y, %m - 1, %-d" }})) {
+			document.writeln('<h3>Donut Sunday, {{ page.date | date: "%B %-d, %Y" }}</h3>');
+		} else {
+			document.writeln('<h3><a href="https://docs.google.com/forms/d/{{ page.formkey }}/viewform">Sign up</a> to help out on Donut Sunday, {{ page.date | date: "%B %-d, %Y" }}</h3>');
+		}
+	</script>
 </div>
 
 {% raw %}
