@@ -1,0 +1,71 @@
+---
+layout: default
+title: Donut Sunday
+spreadsheetid: od6
+masstimes: ["6:30", "7:30", "8:30", "10:00", "12:00"]
+description: Signup information for Donut Sunday
+---
+<script src="/javascripts/libs/angular.min.js"></script>
+<script>
+	var options = {
+		ssSheet: "{{ page.spreadsheetid }}",
+		ssKey: "{{ page.spreadsheetkey }}",
+		//formKey: "{{ page.formkey }}",
+		date: "{{ page.date }}",
+		massTimes: ["{{ page.masstimes | join: '", "' }}"]
+	};
+</script>
+<script src="/javascripts/donuts.js"></script>
+
+<style>
+	table, tr, th, td {
+		border: 1px solid black !important;
+		padding: 2px !important;
+		text-align: center !important;
+	}
+	
+	th {
+		font-weight: bold !important;
+	}
+</style>
+
+<div style="text-align: center;">
+	<h3><a href="https://docs.google.com/forms/d/{{ page.formkey }}/viewform">Sign up</a> to help out on Donut Sunday, {{ page.date }}</h3>
+</div>
+
+{% raw %}
+<div id="donutApp" ng-app="donutApp" ng-controller="donutController">
+    <table border="1" cellspacing="0">
+        <tr>
+            <th rowspan="2">Name</th>
+            <th colspan="{{allMassTimes.length}}">Adults+Boys helping</th>
+            <th rowspan="2">Comments</th>
+        </tr>
+        <tr>
+            <th ng-repeat="masstime in allMassTimes">
+                {{masstime}}
+            </th>            
+        </tr>
+        <tr ng-show="results && results.length == 0">
+            <td colspan="{{ allMassTimes.length + 2 }}" style="text-align: center;">No signups yet.</td>
+        </tr>
+        <tr ng-show="!results">
+            <td colspan="{{ allMassTimes.length + 2 }}" style="text-align: center;">Loading...</td>
+        </tr>
+        <tr ng-repeat="result in results">
+            <td>{{result.name}}</td>
+            <td ng-repeat="masstime in allMassTimes">
+                <span ng-show="result.atmasses[$index]">{{result.adults}}+{{result.boys}}</span>
+            </td>
+            <td>{{result.comments}}</td>
+        </tr>
+        <tr ng-show="results">
+            <td><b>TOTAL:</b></td>
+            <td ng-repeat="masstime in allMassTimes">
+                {{results | totalAtMass:'adults':$index}}+{{results | totalAtMass:'boys':$index}}
+            </td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+{% endraw %}
