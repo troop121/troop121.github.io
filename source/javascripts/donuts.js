@@ -29,7 +29,7 @@ donutApp.controller('donutController', function donutController($scope, $http) {
     var url = "http://spreadsheets.google.com/feeds/list/" + options.ssKey + "/" + options.ssSheet + "/public/values?alt=json";
 
     $http.jsonp(url + '&callback=JSON_CALLBACK').success(function(data) {
-        console.log('success:', arguments);
+        //console.log('success:', arguments);
 		$scope.results = [];
         angular.forEach(data, function(value, index){
             angular.forEach(value.entry, function(entry, index){
@@ -37,7 +37,7 @@ donutApp.controller('donutController', function donutController($scope, $http) {
             });
         });
     }).error(function(error) {
-        console.log('error:', arguments);
+        //console.log('error:', arguments);
 		$scope.results = [];
     });
 });
