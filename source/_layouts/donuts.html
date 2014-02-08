@@ -52,11 +52,14 @@ description: Signup information for Donut Sunday
                 {{masstime}}
             </th>            
         </tr>
-        <tr ng-show="results && results.length == 0">
+        <tr ng-show="results && results.length == 0 && !loadError">
             <td colspan="{{ allMassTimes.length + 2 }}" style="text-align: center;">No signups yet.</td>
         </tr>
         <tr ng-show="!results">
             <td colspan="{{ allMassTimes.length + 2 }}" style="text-align: center;">Loading...</td>
+        </tr>
+        <tr ng-show="loadError">
+            <td colspan="{{ allMassTimes.length + 2 }}" style="text-align: center;">An error occurred while loading signups.</td>
         </tr>
         <tr ng-repeat="result in results">
             <td>{{result.name}}</td>
@@ -73,5 +76,10 @@ description: Signup information for Donut Sunday
             <td></td>
         </tr>
     </table>
+{% comment %}
+	<pre>
+	{{debuginfo | json}}
+	</pre>
+{% endcomment %}
 </div>
 {% endraw %}
