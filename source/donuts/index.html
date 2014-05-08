@@ -16,11 +16,14 @@ title: Donut Sunday
 #spreadsheetkey: 0AuKCZpnArREWdGFoNzBVa1Z0bTBWaVlkcVNHdklhdWc
 #formkey: 13pcBcl9iTUrnedW7qjfEJnhAWWCtCTGhFQFs4nqQx-Y
 #date: 2014-03-09
-spreadsheetkey: 0AuKCZpnArREWdEdaNXd0c3NpSTd4T0xUY05ENW1JcFE
-formkey: 1jsDTYUFN2S6Sx5TD2b2BY0xoJ1R9BFxR_p3jz5-I0ts
-date: 2014-04-27
+#spreadsheetkey: 0AuKCZpnArREWdEdaNXd0c3NpSTd4T0xUY05ENW1JcFE
+#formkey: 1jsDTYUFN2S6Sx5TD2b2BY0xoJ1R9BFxR_p3jz5-I0ts
+#date: 2014-04-27
+spreadsheetkey: 0AuKCZpnArREWdDdGbHlKMXI0d09nUndnUzBsMDRuWUE
+formkey: 1Ipk-Gs6rVEsjkLge4QDUeJu2QMl1KPyl7LriGEwLTno
+date: 2014-05-11
 ---
-Copy this file and customize date, spreadsheetkey, formkey, and optionally masstimes.
+Copy this file (nah, just reuse the same one) and customize date, spreadsheetkey, formkey, and optionally masstimes.
 current date: https://github.com/Shopify/liquid/pull/117
 http://stackoverflow.com/questions/7395520/jekyll-date-format
 comparing dates: https://groups.google.com/forum/#!topic/locomotivecms/4-3gZbv03V0
@@ -42,3 +45,15 @@ Share url: https://docs.google.com/spreadsheet/ccc?key=0AuKCZpnArREWdFZHZjJ5Q2pi
 - Add 0 option for kids, like adults for rare occasions
 
 I checked the box next to the previous form and did "Copy"; clicked that to open, clicked the title and renamed; changed the form to use today's date; clicked to change response destination and clicked create; viewed responses and clicked File, Publish to the Web, Start Publishing.
+
+- In the Scouts folder in Google Drive, check the box next to "Troop 121 Donut Sunday 4/27/2014" (or whatever last month's was), click the "More" button at the top, and click "Make a copy"
+- Click on "Copy of Troop 121 Donut Sunday 4/27/2014" (or whatever) to open it
+- Click on the title at the very top of the page and rename it, to remove "Copy of" and update the date to next Sunday ("5/11/2014" in this case)
+- Click on the header of the form and change the date there too.
+- Check the description, Mass times, etc. to see if any special changes are needed for this week.
+- Click the "Responses (0)" menu, and "Change response destination"; it should have "New spreadsheet" selected, with the proper date. Click Create.
+- Click the "View responses" toolbar button to open the spreadsheet; click File, "Publish to the web" and click the "Start publishing" button (then OK to the popup) -- but don't click Close yet!
+- Copy the "key" querystring parameter from the URL box, and paste it into the YAML frontmatter portion of this index.html file as "spreadsheetkey"
+- Click Close, and then close the spreadsheet window.
+- Back on the form -- click the "Send form" button, and copy the long weird portion of the "Link to share", and paste it into the YAML frontmatter portion of this index.html file as "formkey"
+- Add the date to the YAML frontmatter portion of this index.html file.
