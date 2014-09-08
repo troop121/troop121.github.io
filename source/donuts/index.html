@@ -22,9 +22,13 @@ title: Donut Sunday
 #spreadsheetkey: 0AuKCZpnArREWdDdGbHlKMXI0d09nUndnUzBsMDRuWUE
 #formkey: 1Ipk-Gs6rVEsjkLge4QDUeJu2QMl1KPyl7LriGEwLTno
 #date: 2014-05-11
-spreadsheetkey: 0AuKCZpnArREWdHNYdXB1Z1A4emczVW0xaEJQWWVvSlE
-formkey: 1JSpp8JvleyXyqRxqglf0E2ak5ZxDYF2bLLqRtxHIiGg
-date: 2014-06-08
+#spreadsheetkey: 0AuKCZpnArREWdHNYdXB1Z1A4emczVW0xaEJQWWVvSlE
+#formkey: 1JSpp8JvleyXyqRxqglf0E2ak5ZxDYF2bLLqRtxHIiGg
+#date: 2014-06-08
+newgooglesheets: true
+spreadsheetkey: 1VfVK7b63b2x4sdyuBCktF75J2nAu86I4EprBauI5vfg
+formkey: 1fykAeVZuEx-8ygkQuHCRrJFzSAvaan3RV5pd0PDooaE
+date: 2014-09-14
 ---
 current date: https://github.com/Shopify/liquid/pull/117
 http://stackoverflow.com/questions/7395520/jekyll-date-format
@@ -35,15 +39,16 @@ TODO: This doesn't work on iPhone! It fails badly, saying there are no signups!
 
 THE MONTHLY ROUTINE:
 
-- In the Scouts folder in Google Drive, check the box next to "Troop 121 Donut Sunday 4/27/2014" (or whatever last month's was -- NOT the Responses one, though), click the "More" button at the top, and click "Make a copy"
-- Click on "Copy of Troop 121 Donut Sunday 4/27/2014" (or whatever) to open it
+- In the Scouts folder in Google Drive, check the box next to "Troop 121 Donut Sunday 4/27/2014" (or whatever last month's was -- NOT the Responses one, though), click the "More" button at the top, and click "Make a copy" -- now just right-click and Make a copy
+- Double-click on "Copy of Troop 121 Donut Sunday 4/27/2014" (or whatever) to open it
 - Click on the title at the very top of the page and rename it, to remove "Copy of" and update the date to next Sunday ("5/11/2014" in this case)
 - Click on the header of the form and change the date there too.
 - Check the description, Mass times, etc. to see if any special changes are needed for this week.
 - Click the "Responses (0)" menu, and "Change response destination"; it should have "New spreadsheet" selected, with the proper date. Click Create.
 - Click the "View responses" toolbar button to open the spreadsheet; click File, "Publish to the web" and click the "Start publishing" button (then OK to the popup) -- but don't click Close yet!
-- Copy the "key" querystring parameter from the URL box, and paste it into the YAML frontmatter portion of this index.html file as "spreadsheetkey"
+- Copy the "key" querystring parameter (now just part of the URL) from the URL box, and paste it into the YAML frontmatter portion of this index.html file as "spreadsheetkey"
 - Click Close, and then close the spreadsheet window.
 - Back on the form -- click the "Send form" button, and copy the long weird portion of the "Link to share", and paste it into the YAML frontmatter portion of this index.html file as "formkey"
 - Add the date to the YAML frontmatter portion of this index.html file.
+- "rake generate" in c:\source\ssgtroop121 to test http://local.ssgtroop121.org/donuts/
 - Send out an email to the troop list with the form link! (The "Link to share" from above)

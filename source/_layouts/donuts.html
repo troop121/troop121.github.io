@@ -8,6 +8,7 @@ description: Signup information for Donut Sunday
 <script src="/javascripts/libs/angular.min.js"></script>
 <script>
 	var options = {
+		ssNew: "{{ page.newgooglesheets }}",
 		ssSheet: "{{ page.spreadsheetid }}",
 		ssKey: "{{ page.spreadsheetkey }}",
 		massTimes: ["{{ page.masstimes | join: '", "' }}"]
