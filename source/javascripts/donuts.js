@@ -26,12 +26,7 @@ donutApp.controller('donutController', function donutController($scope, $http) {
     $scope.results = null;
     $scope.allMassTimes = options.massTimes;
     
-    var url;
-	if(options.ssNew) {
-		url = "https://spreadsheets.google.com/feeds/cells/"+ options.ssKey + "/1/public/basic?alt=json";
-	} else {
-		url = "http://spreadsheets.google.com/feeds/list/" + options.ssKey + "/" + options.ssSheet + "/public/values?alt=json";
-	}
+    var url = "http://spreadsheets.google.com/feeds/list/" + options.ssKey + "/" + options.ssSheet + "/public/values?alt=json";
 
     $http.jsonp(url + '&callback=JSON_CALLBACK').success(function(data) {
 		//$scope.debuginfo = { 'success': arguments };

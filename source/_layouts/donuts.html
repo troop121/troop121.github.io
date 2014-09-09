@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Donut Sunday
-spreadsheetid: od6
+#spreadsheetid: od6 # changed for new google sheets
+spreadsheetid: 1
 masstimes: ["6:30", "7:30", "8:30", "10:00", "12:00"]
 description: Signup information for Donut Sunday
 ---
 <script src="/javascripts/libs/angular.min.js"></script>
 <script>
 	var options = {
-		ssNew: "{{ page.newgooglesheets }}",
 		ssSheet: "{{ page.spreadsheetid }}",
 		ssKey: "{{ page.spreadsheetkey }}",
 		massTimes: ["{{ page.masstimes | join: '", "' }}"]
