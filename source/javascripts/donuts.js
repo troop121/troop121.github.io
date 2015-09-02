@@ -1,4 +1,8 @@
+var lastEntry;
+
 function makeNiceEntry(entry, $scope) {
+	lastEntry = entry;
+	console.log("makeNiceEntry:", arguments);
     var rawmasses = entry.gsx$afterwhichmassescanyouhelp.$t;
     if(rawmasses[0] == "'") {
         rawmasses = rawmasses.substr(1);
@@ -27,20 +31,22 @@ donutApp.controller('donutController', function donutController($scope, $http) {
     $scope.allMassTimes = options.massTimes;
     
     var url = "http://spreadsheets.google.com/feeds/list/" + options.ssKey + "/" + options.ssSheet + "/public/values?alt=json";
+	
+	delete $http.defaults.headers.common['X-Requested-With'];
 
-    $http.jsonp(url + '&callback=JSON_CALLBACK').success(function(data) {
-		//$scope.debuginfo = { 'success': arguments };
-        //console.log('success:', arguments);
+    $http.jsonp(url + '&callback=JSON_CALLBACK').success(function(data, status, headers, config) {
+		$scope.debuginfo = { 'what happened': 'success', 'arguments': arguments, 'testing': 123, 'data': data, 'status': status, 'headers': headers, 'config': config };
+        //console.log('http success:', arguments);
 		$scope.results = [];
-		$scope.loadError = false; // Not really needed, since it starts false and can only get set to true, since we never reload data
+		$scope.loadError = false;
         angular.forEach(data, function(value, index){
             angular.forEach(value.entry, function(entry, index){
                 $scope.results.push(makeNiceEntry(entry, $scope));
             });
         });
-    }).error(function(error) {
-        //console.log('error:', arguments);
-		//$scope.debuginfo = { 'error': arguments };
+    }).error(function(data, status, headers, config) {
+        //console.log('http error:', arguments);
+		$scope.debuginfo = { 'what happened': 'error', 'arguments': arguments, 'data': data, 'status': status, 'headers': headers, 'config': config };
 		$scope.loadError = true;
 		$scope.results = [];
     });
