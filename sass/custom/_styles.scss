@@ -4,7 +4,8 @@
 // header background image -- https://github.com/imathis/octopress/issues/356
 header[role="banner"] {
   @media only screen and (min-width: 480px) {
-     background-image: url(/images/ssg-logo.png);
+     background-image: url(/images/TSG_LOGO_PRW_NOBG_FB.png);
+	 background-size: 400px auto;
      background-repeat: no-repeat;
      background-position: right;
   }
