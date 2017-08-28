@@ -4,6 +4,7 @@ title: "Happy New Year!"
 date: 2014-01-06 09:13
 comments: true
 categories: 
+hidden: true
 ---
 I hope everyone had a festive and fun Christmas!  A couple quick reminders. 
 

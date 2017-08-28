@@ -4,6 +4,7 @@ title: "Upcoming events"
 date: 2015-09-02 11:18
 comments: true
 categories: 
+hidden: true
 ---
 Sunday, September 13 is our first Donut Sunday of the new school year. Mrs. Scott will call around for helpers.
 

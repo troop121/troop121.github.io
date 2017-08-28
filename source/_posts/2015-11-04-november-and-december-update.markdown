@@ -4,6 +4,7 @@ title: "November and December Update"
 date: 2015-11-04 22:41
 comments: true
 categories: 
+hidden: true
 ---
 The wreaths will be delivered to St. Agnes on Friday, November 13, between 8 and 10 am. On Saturday the 14th, __please come and pick up your wreaths__ to deliver to your buyers, after the 8:00 am Mass. On Sunday the 15th we will fulfill orders placed at St. Agnes.
 

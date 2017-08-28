@@ -4,6 +4,7 @@ title: "Wreath Sale"
 date: 2013-09-28 17:05
 comments: true
 categories: 
+hidden: true
 ---
 Our wreath sale fund-raiser is now in progress. The proceeds will help us reduce the cost of campouts. We are selling:
 

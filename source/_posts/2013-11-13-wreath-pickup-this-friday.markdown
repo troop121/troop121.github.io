@@ -4,6 +4,7 @@ title: "Wreath pickup this Friday"
 date: 2013-11-13 18:13
 comments: true
 categories: 
+hidden: true
 ---
 The wreaths, garlands, and swags will arrive at St. Agnes this Friday, November 15. Please stop by between 2:30 and 4:30 to pick up your order.
 

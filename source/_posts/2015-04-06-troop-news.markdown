@@ -4,6 +4,7 @@ title: "Troop Activities Update!"
 date: 2015-04-06 20:37
 comments: true
 categories: 
+hidden: true
 ---
 Tomorrow, April 7, is our first meeting of the month.
 

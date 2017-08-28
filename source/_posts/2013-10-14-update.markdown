@@ -5,6 +5,7 @@ date: 2013-10-14 17:35
 comments: true
 categories: 
 author: Captain Kobbermann
+hidden: true
 ---
 A few reminders:
 
